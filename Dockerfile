@@ -76,7 +76,7 @@ RUN build_deps="ca-certificates curl gcc libc-dev libevent-dev libexpat1-dev mak
 #########
 FROM debian:stretch
 
-EXPOSE 53/udp 53/tcp
+EXPOSE 53/udp
 COPY --from=openssl-builder /opt/openssl /opt/openssl
 
 WORKDIR /tmp/src
@@ -164,7 +164,7 @@ WORKDIR /opt
 
 ENV PATH /opt/unbound/sbin:/opt/stubby/bin:$PATH
 
-HEALTHCHECK --interval=5s --timeout=3s --start-period=5s CMD drill @127.0.0.1 cloudflare.com || exit 1
+HEALTHCHECK --interval=15s --timeout=3s --start-period=5s CMD drill @127.0.0.1 cloudflare.com || exit 1
 
 COPY entrypoint.sh /
 RUN chmod +x /entrypoint.sh
