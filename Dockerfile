@@ -76,7 +76,7 @@ RUN build_deps="ca-certificates curl gcc libc-dev libevent-dev libexpat1-dev mak
 #########
 FROM debian:stretch
 
-EXPOSE 53/udp
+EXPOSE 53/udp 53/tcp
 COPY --from=openssl-builder /opt/openssl /opt/openssl
 
 WORKDIR /tmp/src
