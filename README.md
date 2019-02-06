@@ -1,4 +1,4 @@
-[![Docker Repository on Quay.io](https://quay.io/repository/fishi0x01/dns-sandbox/status "Docker Repository on Quay.io")](https://quay.io/repository/fishi0x01/dns-sandbox)
+[![Docker Repository on Quay.io](https://quay.io/repository/fishi/dns-sandbox/status "Docker Repository on Quay.io")](https://quay.io/repository/fishi/dns-sandbox)
 
 # Unbound and Stubby Docker Image
 
