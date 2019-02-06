@@ -19,7 +19,7 @@ fi
 # resolve stubby correctly and does not support @port syntax.
 # This uses ping rather than 'dig +short stubby' to avoid needing dnsutils
 # package.
-stubby_ip=$(ping -4 -c 1 stubby | head -n 1 | cut -d ' ' -f 3 | cut -d '(' -f 2 | cut -d ')' -f 1)
+stubby_ip=127.0.0.1
 stubby_port=@8053
 stubby=$stubby_ip$stubby_port
 
